@@ -36,14 +36,14 @@ type WSDL struct {
 }
 
 // New returns a new WSDL client.
-func New(timeout time.Time) (*WSDL, error) {
-	ws := &WSDL{
+func New(timeout time.Duration) (*WSDL, error) {
+	c := &WSDL{
 		client: &http.Client{
 			Timeout: timeout,
 		},
 	}
 
-	return w, nil
+	return c, nil
 }
 
 // Do makes a request.
@@ -66,39 +66,7 @@ func (c *WSDL) Do(body io.Reader, url, action string, dst io.Writer) error {
 }
 
 // Soap make a SOAP call to endpoint.
-func (c *WSDL) Soap(envelope *Envelope) error {
-
-}
-
-// Envelope struct for SOAP envelope.
-type Envelope struct {
-	XMLName xml.Name `xml:"http://schemas.xmlsoap.org/soap/envelope/ Envelope"`
-	XSI     string   `xml:"xmlns xsi,attr"`
-	XSD     string   `xml:"xmlns xsd,attr"`
-	Soap    string   `xml:"xmlns soap,attr"`
-	Body    Body
-}
-
-// NewEnvelope returns a new Envelope type.
-func NewEnvelope() *Envelope {
-	se := &Envelope{
-		XSI:  "http://www.w3.org/2001/XMLSchema-instance",
-		XSD:  "http://www.w3.org/2001/XMLSchema",
-		Soap: "http://schemas.xmlsoap.org/soap/envelope/",
-	}
-	return se
-}
-
-// Body struct for Envelope content.
-type Body struct {
-	XMLName xml.Name `xml:"http://schemas.xmlsoap.org/soap/envelope/ Body"`
-	Content string   `xml:",innerxml"`
-}
-
-// Fault struct for SOAP fault.
-type Fault struct {
-	XMLName     xml.Name `xml:"Fault"`
-	FaultCode   string   `xml:"faultcode"`
-	FaultString string   `xml:"faultstring"`
-	Detail      string   `xml:"detail"`
+func (c *WSDL) Soap(body, response xml.Name) error {
+	// TODO;
+	return nil
 }

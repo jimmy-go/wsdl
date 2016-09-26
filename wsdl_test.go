@@ -23,8 +23,15 @@
 // SOFTWARE.
 package wsdl
 
-import "testing"
+import (
+	"testing"
+	"time"
+)
 
 func TestNew(t *testing.T) {
 	// TODO; make test
+	_, err := New(time.Second)
+	if err != nil {
+		t.Errorf("err : [%s]", err)
+	}
 }
