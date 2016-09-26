@@ -1,0 +1,2 @@
+# wsdl
+Basic WSDL client.
