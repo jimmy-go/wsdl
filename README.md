@@ -1,4 +1,4 @@
-####Basic WSDL client.
+## WSDL client written in Go.
 
 [![License MIT](https://img.shields.io/npm/l/express.svg)](http://opensource.org/licenses/MIT)
 [![Build Status](https://travis-ci.org/jimmy-go/wsdl.svg?branch=master)](https://travis-ci.org/jimmy-go/wsdl)
@@ -6,16 +6,22 @@
 [![GoDoc](http://godoc.org/github.com/jimmy-go/wsdl?status.png)](http://godoc.org/github.com/jimmy-go/wsdl)
 [![Coverage Status](https://coveralls.io/repos/github/jimmy-go/wsdl/badge.svg?branch=master)](https://coveralls.io/github/jimmy-go/wsdl?branch=master)
 
-#####Installation:
+### Install:
+
 ```
 go get gopkg.in/jimmy-go/wsdl.v0
 ```
 
-#####License:
+### Usage:
+```
+// TODO;
+```
+
+### License:
 
 MIT License
 
-Copyright (c) 2016 Angel Del Castillo
+Copyright (c) 2016 Angel del Castillo
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
